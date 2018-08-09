@@ -145,3 +145,14 @@ Warning:
 **call**
 
 `call` returns a boolean indicating whether the invoked function terminated (`true`) or caused an EVM exception (`false`). It is not possible to access the actual data returned (for this we would need to know the encoding and size in advance).
+
+LOOK BACK AT THIS ^^^
+
+#### Fixed-size byte arrays
+
+`bytes1`, `bytes2`, `bytes3`, …, `bytes32`. `byte` is an alias for `bytes1`.
+
+Operators:
+ - Comparisons: <=, <, ==, !=, >=, > (evaluate to bool)
+ - Bit operators: &, |, ^ (bitwise exclusive or), ~ (bitwise negation), << (left shift), >> (right shift)
+ - Index access: If x is of type bytesI, then x[k] for 0 <= k < I returns the k th byte (read-only).
