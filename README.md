@@ -105,6 +105,14 @@ solc call has been done
 ```
 # to get solc_parser
 ```
+git clone array-io-fm
+cd array-io-fm
+cd solc_compiler
+cmake .
+make
+```
+below is wrong
+```
 $ git clone https://github.com/juj/emsdk.git
 $ cd emsdk
 $ ./emsdk install latest
