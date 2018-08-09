@@ -89,6 +89,31 @@ brew tap ethereum/ethereum
 brew install solidity
 ```
 
+# compile
+```
+solc --ast-json ./contracts/Tempo.sol -o ./output
+```
+
+# from compiler.array.io
+```
+output:
+/opt/solc/bin/solc --ast-json /tmp/gw_input -o ./
+
+solc call has been done
+/opt/solc_compiler/build/solc_parser --ast-json "gw_input_json.ast" --contractname "Temp"
+
+```
+# to get solc_parser
+```
+$ git clone https://github.com/juj/emsdk.git
+$ cd emsdk
+$ ./emsdk install latest
+$ ./emsdk activate latest
+```
+
+
+
+
 # create_contract
 ```
 unlocked >>> gethelp create_contract

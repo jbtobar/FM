@@ -15,7 +15,7 @@ contract Temp {
   uint[] arr;
   data[] darr;
 
-  function Temp() public {
+  constructor() public {
     owner = msg.sender;
     d1.a = 255;
     d1.b = 8191;
