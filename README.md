@@ -1,7 +1,8 @@
 # FM
 FM-test-me-hard
 
-
+## Running Notes
+#### Building
 ```
 git clone git@github.com:arrayio/array-io-core.git
 cd array-io-core
@@ -9,12 +10,96 @@ git submodule update --init --recursive
 cmake -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl -DOPENSSL_LIBRARIES=/usr/local/opt/openssl/lib -DBOOST_ROOT=/usr/local/opt/boost@1.67 -DOPENSSL_INCLUDE_DIR=/usr/local/opt/openssl/include .
 make cli_wallet
 ```
+#### Running
 ```
 ./programs/cli_wallet/cli_wallet --wallet-file=wallet.json --chain-id b6b83a593686087531ce581540564d20b2f75ff9879e9dd2eccfa9a79744b949 -sws://hawking.array.io:8090/ws
 ```
+#### CLI
+```
+Please use the set_password method to initialize a new wallet before continuing
+new >>> set_password dionysus
+locked >>> unlock dionysus
+unlocked >>> import_key "nathan" 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
+1897064ms th_a       wallet.cpp:790                save_wallet_file     ] saving wallet to file wallet.json
+1897074ms th_a       wallet.cpp:466                copy_wallet_file     ] backing up wallet wallet.json to after-import-key-9407629b.wallet
+true
+unlocked >>> list_my_accounts
+[{
+    "id": "1.2.27",
+    "name": "nathan",
+    "owner": {
+      "weight_threshold": 1,
+      "account_auths": [],
+      "key_auths": [[
+          "RAY6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV",
+          1
+        ]
+      ],
+      "address_auths": []
+    },
+    "active": {
+      "weight_threshold": 1,
+      "account_auths": [],
+      "key_auths": [[
+          "RAY6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV",
+          1
+        ]
+      ],
+      "address_auths": []
+    },
+    "options": {
+      "memo_key": "RAY6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV",
+      "voting_account": "1.2.5",
+      "num_witness": 0,
+      "num_committee": 0,
+      "votes": [],
+      "extensions": []
+    },
+    "statistics": "2.5.27",
+    "whitelisting_accounts": [],
+    "blacklisting_accounts": [],
+    "whitelisted_accounts": [],
+    "blacklisted_accounts": [],
+    "owner_special_authority": [
+      0,{}
+    ],
+    "active_special_authority": [
+      0,{}
+    ],
+    "top_n_control_flags": 0
+  }
+]
+
+unlocked >>> list_account_balances nathan
+7999977801.57221 RAY
+```
 
 
+## Questions
 
+- [ ] What commands take us from solidity file to `unlocked >>> create_contract "tempok" "nathan"` ?
+- [ ] Do I have to `set_password` to initialize new account every time or can I unlock it via CL?
+
+
+# solc
+```
+brew update
+brew upgrade
+brew tap ethereum/ethereum
+brew install solidity
+```
+
+# create_contract
+```
+unlocked >>> gethelp create_contract
+
+usage: create_contract ACCOUNT_NAME REGISTRAR CODE ARGS [[optname,optval],[optname,optval]] GASLIMIT BROADCAST
+
+example: create_contract "newaccount" "1.3.11" "_bytecode_" "args" [[library,true],[includable,false],[asset,FTS]] 100000 true
+example: create_contract "newaccount" "someaccount" %_filename_ "args" [] 100000 true
+
+This method should be used if you would like the wallet to create new smart contract account and set its code
+```
 
 
 
