@@ -1,0 +1,126 @@
+{
+    "functions": [
+        {
+            "fullname": "Temp::()",
+            "shortname": "",
+            "hash": "f6e8d2a7",
+            "argument_types": "",
+            "return_types": ""
+        },
+        {
+            "fullname": "Temp::GetA()",
+            "shortname": "GetA",
+            "hash": "aacabc0b",
+            "argument_types": "",
+            "return_types": [
+                "uint256"
+            ]
+        },
+        {
+            "fullname": "Temp::GetB()",
+            "shortname": "GetB",
+            "hash": "290fcbba",
+            "argument_types": "",
+            "return_types": [
+                "uint256"
+            ]
+        },
+        {
+            "fullname": "Temp::SetA(uint256)",
+            "shortname": "SetA",
+            "hash": "c064bb6e",
+            "argument_types": [
+                "uint256"
+            ],
+            "return_types": ""
+        },
+        {
+            "fullname": "Temp::SetB(uint256)",
+            "shortname": "SetB",
+            "hash": "15f498d9",
+            "argument_types": [
+                "uint256"
+            ],
+            "return_types": ""
+        },
+        {
+            "fullname": "Temp::Getd1()",
+            "shortname": "Getd1",
+            "hash": "32a3d07f",
+            "argument_types": "",
+            "return_types": [
+                "uint256",
+                "uint256"
+            ]
+        },
+        {
+            "fullname": "Temp::SetArr(uint256,uint256)",
+            "shortname": "SetArr",
+            "hash": "33af98a0",
+            "argument_types": [
+                "uint256",
+                "uint256"
+            ],
+            "return_types": ""
+        },
+        {
+            "fullname": "Temp::GetArr(uint256)",
+            "shortname": "GetArr",
+            "hash": "862b4218",
+            "argument_types": [
+                "uint256"
+            ],
+            "return_types": [
+                "uint256"
+            ]
+        },
+        {
+            "fullname": "Temp::SetD1Arr(uint256,uint256)",
+            "shortname": "SetD1Arr",
+            "hash": "13b5faac",
+            "argument_types": [
+                "uint256",
+                "uint256"
+            ],
+            "return_types": ""
+        },
+        {
+            "fullname": "Temp::GetD1Arr(uint256)",
+            "shortname": "GetD1Arr",
+            "hash": "0ec9016d",
+            "argument_types": [
+                "uint256"
+            ],
+            "return_types": [
+                "uint256"
+            ]
+        },
+        {
+            "fullname": "Temp::SetDarr(uint256,uint256,uint256,uint256,uint256)",
+            "shortname": "SetDarr",
+            "hash": "9da7c67a",
+            "argument_types": [
+                "uint256",
+                "uint256",
+                "uint256",
+                "uint256",
+                "uint256"
+            ],
+            "return_types": ""
+        },
+        {
+            "fullname": "Temp::GetDarr(uint256,uint256)",
+            "shortname": "GetDarr",
+            "hash": "5b803142",
+            "argument_types": [
+                "uint256",
+                "uint256"
+            ],
+            "return_types": [
+                "uint256",
+                "uint256",
+                "uint256"
+            ]
+        }
+    ]
+}
