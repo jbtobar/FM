@@ -137,10 +137,59 @@ This method should be used if you would like the wallet to create new smart cont
 
 
 
+# Mac
+```
+ls /usr/local/Cellar/openssl@1.1
 
 
+cmake -I/usr/local/opt/openssl@1.1/include -L/usr/local/opt/openssl@1.1/lib ..
+-I/usr/local/opt/openssl@1.1/include -L/usr/local/opt/openssl@1.1/lib
+cmake -DOPENSSL_ROOT_DIR=/usr/local/Cellar/openssl@1.1/1.1.0h -DOPENSSL_LIBRARIES=/usr/local/Cellar/openssl@1.1/1.1.0h/lib -DOPENSSL_INCLUDE_DIR=/usr/local/Cellar/openssl@1.1/1.1.0h/include ..
+
+```
+
+# ON UBUNTU
+
+```
+cd /usr/local/src/
+wget https://www.openssl.org/source/openssl-1.1.0g.tar.gz
+tar -xf openssl-1.1.0g.tar.gz
+cd openssl-1.1.0g
+
+./config --prefix=/usr/local/openssl --openssldir=/usr/local/openssl
+make
+sudo make install
 
 
+cmake -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl -DOPENSSL_LIBRARIES=/usr/local/opt/openssl/lib -DOPENSSL_INCLUDE_DIR=/usr/local/opt/openssl/include .
+```
+# Crazy stuff
+Error:
+```
+/home/jbt/array/array-io-core/libraries/chain/IFMHostImpl.cpp:238:59: error: expected ‘,’ before ‘)’ token
+     static_assert(sizeof(taddr.addr._hash) == sizeof(addr));
+                                                           ^
+/home/jbt/array/array-io-core/libraries/chain/IFMHostImpl.cpp:238:59: error: expected string-literal before ‘)’ token
+```
+```
+...
+bool IFMHostImpl::env_map_address(const TAddr& addr, TAccountID& account, bool *create)
+{
+    address taddr;
+    static_assert(sizeof(taddr.addr._hash) == sizeof(addr));
+    memcpy(taddr.addr._hash, addr.data(), sizeof(taddr.addr._hash));
+...
+```
+to
+```
+...
+bool IFMHostImpl::env_map_address(const TAddr& addr, TAccountID& account, bool *create)
+{
+    address taddr;
+    static_assert(sizeof(taddr.addr._hash) == sizeof(addr),);
+    memcpy(taddr.addr._hash, addr.data(), sizeof(taddr.addr._hash));
+...
+```
 
 
 
