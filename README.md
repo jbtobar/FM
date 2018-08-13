@@ -186,8 +186,12 @@ to
 bool IFMHostImpl::env_map_address(const TAddr& addr, TAccountID& account, bool *create)
 {
     address taddr;
-    static_assert(sizeof(taddr.addr._hash) == sizeof(addr),);
+    static_assert(sizeof(taddr.addr._hash) == sizeof(addr), "Not sure what this will do...");
     memcpy(taddr.addr._hash, addr.data(), sizeof(taddr.addr._hash));
+
+    const auto& idx = m_d.get_index_type<account_index>();
+    const auto& aidx = dynamic_cast<const primary_index<account_index>&>(idx);
+
 ...
 ```
 
