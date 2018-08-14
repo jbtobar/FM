@@ -104,3 +104,19 @@ Make sure gperftools are installed:
 ```
 sudo apt-get install google-perftools libgoogle-perftools-dev
 ```
+
+
+---
+
+# Running Tests
+
+alias cli_wallet=''
+```
+create_contract "c10103012" "nathan" %/home/jbt/array/tests/solc_parser_res.forth "" [] 100000 true
+
+
+```
+
+```
+execute_contract "tickers001" "nathan" "8810d422" 0 BTS 10000 "" true
+```
