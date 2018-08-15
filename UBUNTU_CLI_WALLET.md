@@ -112,7 +112,7 @@ sudo apt-get install google-perftools libgoogle-perftools-dev
 
 alias cli_wallet=''
 ```
-create_contract "c10103012" "nathan" %/home/jbt/array/tests/solc_parser_res.forth "" [] 100000 true
+create_contract "c1010333012" "nathan" %/home/jbt/array/tests/solc_parser_res.forth "" [] 100000 true
 execute_contract "c10103012" "nathan" "8810d422" 0 BTS 10000 "" true
 
 ```

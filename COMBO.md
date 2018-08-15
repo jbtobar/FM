@@ -72,3 +72,54 @@ list_account_balances nathan
 
 unlocked >>>
 ```
+
+# What
+So, just to make sure I'm on the right track:
+With the following command:
+```
+unlocked >>> create_contract "jb101" "nathan" %/home/jbt/array/tests/solc_parser_res.forth "" [] 100000 true
+```
+I get the following output:
+```
+create_contract "c1010333012" "nathan" %/home/jbt/array/tests/solc_parser_res.forth "" [] 100000 true
+2296821ms th_a       wallet.cpp:790                save_wallet_file     ] saving wallet to file /home/jbt/array/wallet.json
+{
+  "ref_block_num": 102,
+  "ref_block_prefix": 1152568882,
+  "expiration": "2018-08-15T09:38:45",
+  "operations": [[
+      34,{
+        "fee": {
+          "amount": 100483300,
+          "asset_id": "1.3.0"
+        },
+        "gas_price": {
+          "asset_amount": 100000,
+          "gas_amount": 100
+        },
+        "gas_limit": 100000,
+        "registrar": "1.2.27",
+        "name": "c1010333012",
+        "code": "203a205..........c4c20",
+        "args": "",
+        "asset_symbol": "",
+        "flags": 0,
+        "extensions": []
+      }
+    ]
+  ],
+  "extensions": [],
+  "signatures": [
+    "1f257392775efc0576d046e17d197706b59645178b366e533e617050d7351df55f7b71991695e9cf5765f18fc7156b4337168852a92de8e9fc227ec2a3bb0128f2"
+  ]
+}
+```
+This means
+
+# Other commands
+```
+call_contract "c1010333012" "0bbccaaa"
+```
+```
+execute_contract "c1010333012" "nathan" "bacb0f29" 1 RAY 100000 "" true
+```
