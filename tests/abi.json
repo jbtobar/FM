@@ -1,13 +1,6 @@
 {
     "functions": [
         {
-            "fullname": "Temp::()",
-            "shortname": "",
-            "hash": "f6e8d2a7",
-            "argument_types": "",
-            "return_types": ""
-        },
-        {
             "fullname": "Temp::GetA()",
             "shortname": "GetA",
             "hash": "aacabc0b",
@@ -121,6 +114,56 @@
                 "uint256",
                 "uint256"
             ]
+        },
+        {
+            "fullname": "Temp::GetMapping(uint256,uint256,uint256)",
+            "shortname": "GetMapping",
+            "hash": "b739ba6a",
+            "argument_types": [
+                "uint256",
+                "uint256",
+                "uint256"
+            ],
+            "return_types": [
+                "uint256",
+                "uint256",
+                "uint256"
+            ]
+        },
+        {
+            "fullname": "Temp::SetMappingLength(uint256,uint256)",
+            "shortname": "SetMappingLength",
+            "hash": "5538ca44",
+            "argument_types": [
+                "uint256",
+                "uint256"
+            ],
+            "return_types": ""
+        },
+        {
+            "fullname": "Temp::SetMappingElLength(uint256,uint256,uint256)",
+            "shortname": "SetMappingElLength",
+            "hash": "ce425a80",
+            "argument_types": [
+                "uint256",
+                "uint256",
+                "uint256"
+            ],
+            "return_types": ""
+        },
+        {
+            "fullname": "Temp::SetMapping(uint256,uint256,uint256,uint256,uint256,uint256)",
+            "shortname": "SetMapping",
+            "hash": "8604fc8f",
+            "argument_types": [
+                "uint256",
+                "uint256",
+                "uint256",
+                "uint256",
+                "uint256",
+                "uint256"
+            ],
+            "return_types": ""
         }
     ]
 }
