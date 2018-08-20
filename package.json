@@ -1,0 +1,27 @@
+{
+  "name": "fm",
+  "version": "1.0.0",
+  "description": "FM-test-me-hard",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbtobar/FM.git"
+  },
+  "author": "JBT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbtobar/FM/issues"
+  },
+  "homepage": "https://github.com/jbtobar/FM#readme",
+  "dependencies": {
+    "keccak": "^1.4.0",
+    "sha3": "^1.2.2"
+  }
+}
